@@ -1,0 +1,3 @@
+<form *ngIf="form.fields">
+    <autofield *ngFor="let field of form.fields" [field]="field"></autofield>
+</form>

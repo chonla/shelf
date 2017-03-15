@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label [for]="field.name">{{field.name}}</label>
+    <input [name]="field.name" type="text" class="form-control" maxlength="64" *ngIf="field.type=='very_short_text'">
+    <input [name]="field.name" type="text" class="form-control" maxlength="128" *ngIf="field.type=='short_text'">
+    <input [name]="field.name" type="text" class="form-control" maxlength="256" *ngIf="field.type=='medium_text'">
+    <input [name]="field.name" type="text" class="form-control" maxlength="1024" *ngIf="field.type=='long_text'">
+    <textarea [name]="field.name" class="form-control" *ngIf="field.type=='very_long_text'">
+    </textarea>
+    <datetime-picker [name]="field.name" *ngIf="field.type=='datetime'"></datetime-picker>
+</div>
