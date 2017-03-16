@@ -1,5 +1,6 @@
 <div class="form-group">
     <label [for]="field.name">{{field.name|fieldToLabel}}</label>
+    <input [name]="field.name" type="number" class="form-control" maxlength="10" *ngIf="field.type=='auto'" readonly>
     <input [name]="field.name" type="text" class="form-control" maxlength="64" *ngIf="field.type=='very_short_text'">
     <input [name]="field.name" type="text" class="form-control" maxlength="128" *ngIf="field.type=='short_text'">
     <input [name]="field.name" type="text" class="form-control" maxlength="256" *ngIf="field.type=='medium_text'">
