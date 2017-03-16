@@ -11,20 +11,16 @@ export class DatetimePickerComponent implements AfterViewInit {
     @Input() format: string;
 
     private id: string;
-    private hasDate: boolean;
-    private hasTime: boolean;
 
     constructor() {
         this.id = 'ng2_datetime_input_' + Math.random().toString(36).substring(7);
-        this.hasDate = this.formatHasDate();
-        this.hasTime = this.formatHasTime();
     }
 
-    formatHasDate() : boolean {
+    hasDate() : boolean {
         return /[DMY]/.test(this.format);
     }
 
-    formatHasTime() : boolean {
+    hasTime() : boolean {
         return /[Hms]/.test(this.format);
     }
 
@@ -32,6 +28,7 @@ export class DatetimePickerComponent implements AfterViewInit {
         $(this.el.nativeElement)
             .datetimepicker({
                 format: this.format,
+                sideBySide: true
             });
     }
 }

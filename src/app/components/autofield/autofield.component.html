@@ -5,7 +5,7 @@
     <input [name]="field.name" type="text" class="form-control" maxlength="256" *ngIf="field.type=='medium_text'">
     <input [name]="field.name" type="text" class="form-control" maxlength="1024" *ngIf="field.type=='long_text'">
     <textarea [name]="field.name" class="form-control" *ngIf="field.type=='very_long_text'"></textarea>
-    <datetime-picker [name]="field.name" *ngIf="field.type=='datetime'" format="YYYY-MM-DD HH:mm:ss"></datetime-picker>
+    <datetime-picker [name]="field.name" *ngIf="field.type=='datetime'" format="YYYY-MM-DD H:mm:ssA"></datetime-picker>
     <datetime-picker [name]="field.name" *ngIf="field.type=='date'" format="YYYY-MM-DD"></datetime-picker>
-    <datetime-picker [name]="field.name" *ngIf="field.type=='time'" format="HH:mm:ss"></datetime-picker>
+    <datetime-picker [name]="field.name" *ngIf="field.type=='time'" format="H:mm:ssA"></datetime-picker>
 </div>
