@@ -49,7 +49,7 @@ export class HatchMetaConfig {
             },
             {
                 "name": "detail",
-                "type": "long_text"
+                "type": "very_long_text"
             },
             {
                 "name": "price",
@@ -90,6 +90,14 @@ export class HatchMetaConfig {
             {
                 "name": "updated_time",
                 "type": "datetime"
+            },
+            {
+                "name": "when",
+                "type": "time"
+            },
+            {
+                "name": "date",
+                "type": "date"
             }
         ]
     }

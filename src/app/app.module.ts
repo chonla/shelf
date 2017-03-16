@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -8,13 +8,15 @@ import { AppComponent } from './components/app/app.component';
 import { AutoFormComponent } from './components/autoform/autoform.component';
 import { AutoFieldComponent } from './components/autofield/autofield.component';
 import { DatetimePickerComponent } from './components/datetime-picker/datetime-picker.component';
+import { FieldToLabelPipe } from './pipes/fieldToLabel/fieldToLabel.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AutoFormComponent,
     AutoFieldComponent,
-    DatetimePickerComponent
+    DatetimePickerComponent,
+    FieldToLabelPipe
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,11 @@ import { DatetimePickerComponent } from './components/datetime-picker/datetime-p
   providers: [
     HatchMetaConfig
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

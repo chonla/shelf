@@ -7,7 +7,7 @@ import { HatchMetaConfig } from '../../config/hatchmeta.config';
 })
 export class AutoFieldComponent {
     @Input() field: Object;
-
+    
     constructor(private config: HatchMetaConfig) {
     }
 }
