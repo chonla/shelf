@@ -9,4 +9,5 @@
     <datetime-picker [name]="field.name" *ngIf="field.type=='datetime'" format="YYYY-MM-DD H:mm:ssA"></datetime-picker>
     <datetime-picker [name]="field.name" *ngIf="field.type=='date'" format="YYYY-MM-DD"></datetime-picker>
     <datetime-picker [name]="field.name" *ngIf="field.type=='time'" format="H:mm:ssA"></datetime-picker>
+    <tags-input [name]="field.name" *ngIf="field.type=='tags'"></tags-input>
 </div>
