@@ -3,6 +3,59 @@
   box-shadow: none; }
 
 .shelf-calendar {
+  display: block;
+  border: none;
   width: 100%; }
+
+.shelf-calendar-input {
+  display: table-cell;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+
+.shelf-chips {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+  .shelf-chips ul {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 0px;
+    margin: 0px; }
+    .shelf-chips ul.ui-inputtext {
+      padding: 0px; }
+    .shelf-chips ul.ui-state-default {
+      border: none; }
+    .shelf-chips ul:not(.ui-state-disabled).ui-state-focus {
+      border: none;
+      box-shadow: none; }
+    .shelf-chips ul .ui-chips-input-token {
+      margin: 0px;
+      padding: 0px; }
+    .shelf-chips ul input {
+      padding: 0px;
+      height: 22px; }
 
 /*# sourceMappingURL=shelf.css.map */

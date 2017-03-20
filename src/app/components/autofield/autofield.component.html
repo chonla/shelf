@@ -7,9 +7,9 @@
     <input [name]="field.name" type="text" class="form-control" pInputText maxlength="1024" *ngIf="field.type=='long_text'">
     <input [name]="field.name" type="number" class="form-control" pInputText maxlength="10" *ngIf="['number','int'].indexOf(field.type) >= 0">
     <p-editor [name]="field.name" *ngIf="field.type=='very_long_text'" [style]="{'height': '320px'}"></p-editor>
-    <p-calendar [name]="field.name" *ngIf="field.type=='datetime'" showTime="true" dateFormat="yy-mm-dd" hourFormat="12" showIcon="true" styleClass="shelf-calendar"></p-calendar>
-    <p-calendar [name]="field.name" *ngIf="field.type=='date'" dateFormat="yy-mm-dd" showIcon="true" styleClass="shelf-calendar"></p-calendar>
-    <p-calendar [name]="field.name" *ngIf="field.type=='time'" timeOnly="true" hourFormat="12" showIcon="true" icon="fa-clock-o" styleClass="shelf-calendar"></p-calendar>
-    <p-chips [name]="field.name" *ngIf="field.type=='tags'"></p-chips>
+    <p-calendar [name]="field.name" styleClass="shelf-calendar" inputStyleClass="shelf-calendar-input" *ngIf="field.type=='datetime'" showTime="true" dateFormat="yy-mm-dd" hourFormat="12"></p-calendar>
+    <p-calendar [name]="field.name" *ngIf="field.type=='date'" dateFormat="yy-mm-dd" styleClass="shelf-calendar" inputStyleClass="shelf-calendar-input"></p-calendar>
+    <p-calendar [name]="field.name" *ngIf="field.type=='time'" timeOnly="true" hourFormat="12" styleClass="shelf-calendar" inputStyleClass="shelf-calendar-input"></p-calendar>
+    <p-chips [name]="field.name" *ngIf="field.type=='tags'" styleClass="shelf-chips"></p-chips>
     <p-fileUpload [name]="field.name" url="http://localhost:3000/upload" multiple="multiple" *ngIf="field.type=='files'"></p-fileUpload>
 </div>
