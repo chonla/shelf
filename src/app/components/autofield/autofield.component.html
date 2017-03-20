@@ -6,7 +6,7 @@
     <input [name]="field.name" type="text" class="form-control" pInputText maxlength="256" *ngIf="field.type=='medium_text'">
     <input [name]="field.name" type="text" class="form-control" pInputText maxlength="1024" *ngIf="field.type=='long_text'">
     <input [name]="field.name" type="number" class="form-control" pInputText maxlength="10" *ngIf="['number','int'].indexOf(field.type) >= 0">
-    <textarea [name]="field.name" class="form-control" *ngIf="field.type=='very_long_text'" pInputTextarea autoResize="true"></textarea>
+    <p-editor [name]="field.name" *ngIf="field.type=='very_long_text'" [style]="{'height': '320px'}"></p-editor>
     <p-calendar [name]="field.name" *ngIf="field.type=='datetime'" showTime="true" dateFormat="yy-mm-dd" hourFormat="12" showIcon="true" styleClass="shelf-calendar"></p-calendar>
     <p-calendar [name]="field.name" *ngIf="field.type=='date'" dateFormat="yy-mm-dd" showIcon="true" styleClass="shelf-calendar"></p-calendar>
     <p-calendar [name]="field.name" *ngIf="field.type=='time'" timeOnly="true" hourFormat="12" showIcon="true" icon="fa-clock-o" styleClass="shelf-calendar"></p-calendar>

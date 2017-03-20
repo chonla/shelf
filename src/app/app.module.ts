@@ -3,7 +3,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { CalendarModule, InputTextareaModule, InputTextModule, ChipsModule, FileUploadModule } from 'primeng/primeng';
+import { 
+  CalendarModule, InputTextareaModule, InputTextModule, ChipsModule, FileUploadModule,
+  EditorModule,SharedModule } from 'primeng/primeng';
 
 import { HatchMetaConfig } from './config/hatchmeta.config';
 import { AppComponent } from './components/app/app.component';
@@ -45,7 +47,9 @@ const appRoutes: Routes = [
     InputTextModule,
     InputTextareaModule,
     ChipsModule,
-    FileUploadModule
+    FileUploadModule,
+    EditorModule,
+    SharedModule
   ],
   providers: [
     HatchMetaConfig
