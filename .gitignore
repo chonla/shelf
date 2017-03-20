@@ -42,3 +42,6 @@ Thumbs.db
 
 # lock files
 *.lock
+
+# cache
+.sass-cache/

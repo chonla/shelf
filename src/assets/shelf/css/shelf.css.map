@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACI,4BAAoB;EAChB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI;;AAExB,YAAY;EACR,OAAO,EAAE,KAAK",
+"mappings": "AACI,4BAAoB;EAChB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI;;AAExB,eAAe;EACX,KAAK,EAAE,IAAI",
 "sources": ["../sass/shelf.sass"],
 "names": [],
 "file": "shelf.css"
