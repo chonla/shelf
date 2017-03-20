@@ -5,8 +5,8 @@ Shelf is a tool to perform CRUD activities to content created by [Hatch](https:/
 ## Installation
 
 * Copy ```hatchmeta.config.ts``` from Hatch meta directory, e.g. ```./meta/ng2``` to ```src/app/config``` in Shelf directory.
-* Build Shelf.
-* You are ready to go.
+* Build Shelf with ```npm install``` and ```ng build```.
+* You are ready to go. Your Shelf is in ```./dist``` directory.
 
 ## License
 
