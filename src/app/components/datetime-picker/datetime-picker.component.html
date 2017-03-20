@@ -1,7 +1,0 @@
-<div class="input-group date" #dateTimeInput>
-    <input class="form-control" type="text" value="" [name]="name" format="format" [id]="id">
-    <span class="input-group-addon">
-        <span class="glyphicon glyphicon-time" *ngIf="hasTime() && !hasDate()"></span>
-        <span class="glyphicon glyphicon-calendar" *ngIf="!hasTime() || hasDate()"></span>
-    </span>
-</div>

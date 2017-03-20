@@ -1,14 +1,15 @@
 <div class="form-group">
-    <label [for]="field.name">{{field.name|fieldToLabel}}</label>
-    <input [name]="field.name" type="number" class="form-control" maxlength="10" *ngIf="field.type=='auto'" readonly>
-    <input [name]="field.name" type="text" class="form-control" maxlength="64" *ngIf="field.type=='very_short_text'">
-    <input [name]="field.name" type="text" class="form-control" maxlength="128" *ngIf="field.type=='short_text'">
-    <input [name]="field.name" type="text" class="form-control" maxlength="256" *ngIf="field.type=='medium_text'">
-    <input [name]="field.name" type="text" class="form-control" maxlength="1024" *ngIf="field.type=='long_text'">
-    <input [name]="field.name" type="number" class="form-control" maxlength="10" *ngIf="['number','int'].indexOf(field.type) >= 0">
-    <textarea [name]="field.name" class="form-control" *ngIf="field.type=='very_long_text'"></textarea>
-    <datetime-picker [name]="field.name" *ngIf="field.type=='datetime'" format="YYYY-MM-DD H:mm:ssA"></datetime-picker>
-    <datetime-picker [name]="field.name" *ngIf="field.type=='date'" format="YYYY-MM-DD"></datetime-picker>
-    <datetime-picker [name]="field.name" *ngIf="field.type=='time'" format="H:mm:ssA"></datetime-picker>
-    <tags-input [name]="field.name" *ngIf="field.type=='tags'"></tags-input>
+    <label [for]="field.name" class="shelf-form-label">{{field.name|fieldToLabel}}</label>
+    <input [name]="field.name" type="number" class="form-control" pInputText maxlength="10" *ngIf="field.type=='auto'" readonly>
+    <input [name]="field.name" type="text" class="form-control" pInputText maxlength="64" *ngIf="field.type=='very_short_text'">
+    <input [name]="field.name" type="text" class="form-control" pInputText maxlength="128" *ngIf="field.type=='short_text'">
+    <input [name]="field.name" type="text" class="form-control" pInputText maxlength="256" *ngIf="field.type=='medium_text'">
+    <input [name]="field.name" type="text" class="form-control" pInputText maxlength="1024" *ngIf="field.type=='long_text'">
+    <input [name]="field.name" type="number" class="form-control" pInputText maxlength="10" *ngIf="['number','int'].indexOf(field.type) >= 0">
+    <textarea [name]="field.name" class="form-control" *ngIf="field.type=='very_long_text'" pInputTextarea autoResize="true"></textarea>
+    <p-calendar [name]="field.name" inputStyleClass="form-control" *ngIf="field.type=='datetime'" showTime="true" dateFormat="yy-mm-dd" hourFormat="12"></p-calendar>
+    <p-calendar [name]="field.name" inputStyleClass="form-control" *ngIf="field.type=='date'" dateFormat="yy-mm-dd"></p-calendar>
+    <p-calendar [name]="field.name" inputStyleClass="form-control" *ngIf="field.type=='time'" timeOnly="true" hourFormat="12"></p-calendar>
+    <p-chips [name]="field.name" *ngIf="field.type=='tags'"></p-chips>
+    <p-fileUpload [name]="field.name" url="http://localhost:3000/upload" multiple="multiple" *ngIf="field.type=='files'"></p-fileUpload>
 </div>
