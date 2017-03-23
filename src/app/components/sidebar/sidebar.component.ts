@@ -51,13 +51,8 @@ import { FieldToLabelPipe } from '../../pipes/fieldToLabel/fieldToLabel.pipe'
 export class SidebarComponent implements OnInit {
 
   private menu = [];
-  private labelizer: FieldToLabelPipe;
-  private config: HatchMetaConfig;
 
-  constructor(private conf: HatchMetaConfig, private lbl: FieldToLabelPipe) {
-    this.labelizer = lbl;
-    this.config = conf;
-    
+  constructor(private config: HatchMetaConfig, private labelizer: FieldToLabelPipe) {    
     let group = this.metaMenu();
     this.menu.push(group);
 

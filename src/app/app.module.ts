@@ -17,6 +17,7 @@ import { CollapsibleSidebarMenuComponent } from './components/collapsible-sideba
 import { FieldToLabelPipe } from './pipes/fieldToLabel/fieldToLabel.pipe';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EntityGridComponent } from './components/entity-grid/entity-grid.component';
+import { EntityDashboardComponent } from './components/entity-dashboard/entity-dashboard.component';
 
 const appRoutes: Routes = [
   // { path: 'crisis-center', component: CrisisListComponent },
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
   //   redirectTo: '/heroes',
   //   pathMatch: 'full'
   // },
-  { path: 'entity/:entity', component: EntityGridComponent },
+  { path: 'entity/:entity', component: EntityDashboardComponent },
   { path: 'form/:entity', component: AutoFormComponent },
   { path: '**', component: AutoFormComponent }
 ];
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     FieldToLabelPipe,
     CollapsibleSidebarMenuComponent,
     SidebarComponent,
-    EntityGridComponent
+    EntityGridComponent,
+    EntityDashboardComponent
   ],
   imports: [
     BrowserModule,
