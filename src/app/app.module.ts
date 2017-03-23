@@ -12,8 +12,11 @@ import { AppComponent } from './components/app/app.component';
 
 import { AutoFormComponent } from './components/autoform/autoform.component';
 import { AutoFieldComponent } from './components/autofield/autofield.component';
+import { CollapsibleSidebarMenuComponent } from './components/collapsible-sidebar-menu/collapsible-sidebar-menu.component';
 
 import { FieldToLabelPipe } from './pipes/fieldToLabel/fieldToLabel.pipe';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { EntityGridComponent } from './components/entity-grid/entity-grid.component';
 
 const appRoutes: Routes = [
   // { path: 'crisis-center', component: CrisisListComponent },
@@ -27,6 +30,7 @@ const appRoutes: Routes = [
   //   redirectTo: '/heroes',
   //   pathMatch: 'full'
   // },
+  { path: 'entity/:entity', component: EntityGridComponent },
   { path: 'form/:entity', component: AutoFormComponent },
   { path: '**', component: AutoFormComponent }
 ];
@@ -36,7 +40,10 @@ const appRoutes: Routes = [
     AppComponent,
     AutoFormComponent,
     AutoFieldComponent,
-    FieldToLabelPipe
+    FieldToLabelPipe,
+    CollapsibleSidebarMenuComponent,
+    SidebarComponent,
+    EntityGridComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,8 @@ const appRoutes: Routes = [
     SharedModule
   ],
   providers: [
-    HatchMetaConfig
+    HatchMetaConfig,
+    FieldToLabelPipe
   ],
   bootstrap: [
     AppComponent

@@ -9,4 +9,8 @@ export class HatchMetaConfig {
     get(key: any) {
         return this.config[key];
     }
+
+    keys() {
+        return Object.keys(this.config);
+    }
 }
