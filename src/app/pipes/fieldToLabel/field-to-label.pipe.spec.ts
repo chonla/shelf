@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { FieldToLabelPipe } from './fieldToLabel.pipe';
+import { FieldToLabelPipe } from './field-to-label.pipe';
 
 describe('FieldToLabelPipe', () => {
     it('should convert to uppercase if input is id', async(() => {

@@ -1,3 +1,19 @@
-<p>
-  entity-grid-component works!
-</p>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let field of fields" class="no-wrap-cell">{{ field.name | fieldToLabel }}</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="data">
+      <tr *ngFor="let row of data">
+        <td *ngFor="let field of fields">{{ row[field.name] | fieldRender:field.type }}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!data">
+      <tr>
+        <td [colSpan]="fields.length"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
+import { EntityLoaderService } from '../../services/entity-loader.service';
 
 @Component({
   selector: 'entity-grid',
   templateUrl: './entity-grid.component.html',
   styleUrls: ['./entity-grid.component.css']
 })
-export class EntityGridComponent implements OnInit {
+export class EntityGridComponent implements OnChanges {
+  private data:Object[];
+  private fields:string[];
+  @Input() entity:string;
 
-  constructor() { }
+  constructor(private entityService:EntityLoaderService) {
+   }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.fields = this.entityService.getFields(this.entity);
+    this.entityService.get(this.entity)
+            .subscribe(res => {
+                this.data = res.results;
+            });
   }
 
 }

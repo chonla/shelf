@@ -8,16 +8,20 @@ import {
   EditorModule,SharedModule } from 'primeng/primeng';
 
 import { HatchMetaConfig } from './config/hatchmeta.config';
+import { AppConfig } from './config/app.config';
+
 import { AppComponent } from './components/app/app.component';
+
+import { FieldToLabelPipe } from './pipes/fieldToLabel/field-to-label.pipe';
+import { FieldRenderPipe } from './pipes/fieldRender/field-render.pipe';
 
 import { AutoFormComponent } from './components/autoform/autoform.component';
 import { AutoFieldComponent } from './components/autofield/autofield.component';
-import { CollapsibleSidebarMenuComponent } from './components/collapsible-sidebar-menu/collapsible-sidebar-menu.component';
-
-import { FieldToLabelPipe } from './pipes/fieldToLabel/fieldToLabel.pipe';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EntityGridComponent } from './components/entity-grid/entity-grid.component';
 import { EntityDashboardComponent } from './components/entity-dashboard/entity-dashboard.component';
+
+import { EntityLoaderService } from './services/entity-loader.service';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   // { path: 'crisis-center', component: CrisisListComponent },
@@ -33,7 +37,7 @@ const appRoutes: Routes = [
   // },
   { path: 'entity/:entity', component: EntityDashboardComponent },
   { path: 'form/:entity', component: AutoFormComponent },
-  { path: '**', component: AutoFormComponent }
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
@@ -42,10 +46,10 @@ const appRoutes: Routes = [
     AutoFormComponent,
     AutoFieldComponent,
     FieldToLabelPipe,
-    CollapsibleSidebarMenuComponent,
-    SidebarComponent,
     EntityGridComponent,
-    EntityDashboardComponent
+    EntityDashboardComponent,
+    FieldRenderPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,9 @@ const appRoutes: Routes = [
   ],
   providers: [
     HatchMetaConfig,
-    FieldToLabelPipe
+    AppConfig,
+    FieldToLabelPipe,
+    EntityLoaderService
   ],
   bootstrap: [
     AppComponent
